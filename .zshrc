@@ -60,7 +60,7 @@ DISABLE_UPDATE_PROMPT="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-HIST_STAMPS="dd/mm/yyyy"
+HIST_STAMPS="%d/%m/%Y"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -74,6 +74,7 @@ plugins=(git docker docker-compose colorize command-not-found common-aliases ubu
 
 source $ZSH/oh-my-zsh.sh
 
+# Show the username and host to avoid host confusion with the same prompt
 PROMPT="$fg[cyan]%}$USER@%{$fg[cyan]%}%m ${PROMPT}"
 
 # User configuration
